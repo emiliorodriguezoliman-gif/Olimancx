@@ -1,0 +1,74 @@
+import "./globals.css";
+
+// ✅ Metadata: con fallback local para evitar warnings y OG correcto
+export const metadata = {
+  metadataBase:
+    typeof process !== "undefined" && process.env.NEXT_PUBLIC_SITE_URL
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+      : new URL("http://localhost:3000"),
+  title: "Oliman CX — Automatización para vender más",
+  description:
+    "Pagos, agendas y respuestas 24/7 con WhatsApp API incluido, reportes claros y coaching humano.",
+  openGraph: {
+    title: "Oliman CX — Automatización con toque humano",
+    description:
+      "Pagos, agendas y respuestas 24/7 + coaching. Más ventas con menos esfuerzo.",
+    images: [{ url: "/brand/oi.png", width: 600, height: 600 }],
+    url: "/",
+    siteName: "Oliman CX",
+    type: "website",
+    locale: "es_MX",
+  },
+  alternates: {
+    canonical:
+      (typeof process !== "undefined" && process.env.NEXT_PUBLIC_SITE_URL) ||
+      "http://localhost:3000",
+  },
+};
+
+export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Oliman CX",
+    telephone: "+52 222 820 8051",
+    email: "emilio.rodriguez.oliman@gmail.com",
+    url:
+      (typeof process !== "undefined" && process.env.NEXT_PUBLIC_SITE_URL) ||
+      "http://localhost:3000",
+    // Mejor usar el isotipo/brand OI en logo:
+    logo: "/brand/oi.png",
+    areaServed: "MX",
+    description:
+      "Pagos, agendas y respuestas 24/7 con coaching humano y reportes.",
+  };
+
+  return (
+    <html lang="es">
+      <head>
+        {/* ✅ Favicon de pestaña: Next ya sirve app/icon.png, lo declaramos explícito con bust */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon.png?v=4" />
+        {/* ✅ Apple touch icon para Safari/iOS — DEBE estar en /public */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png?v=4"
+        />
+        {/* (opcional) precomposed si lo generaste */}
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="180x180"
+          href="/apple-touch-icon-precomposed.png?v=4"
+        />
+
+        {/* JSON-LD estructurado */}
+        <script
+          type="application/ld+json"
+          // Nota: en React 19+, se recomienda usar <script dangerouslySetInnerHTML={{__html: ...}} />
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="antialiased">{children}</body>
+    </html>
+  );
+}   

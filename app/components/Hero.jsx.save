@@ -1,0 +1,58 @@
+import CentralContainer from "./layout/CentralContainer";
+import Image from "next/image";
+
+export default function Hero() {
+  return (
+    <section id="hero" className="bg-white py-16">
+      <CentralContainer>
+        <div className="text-center">
+          <Image
+            src="/brand/oi.png"
+            alt="OI Logo"
+            width={160}
+            height={160}
+            className="mx-auto mb-6"
+            priority
+          />
+          <h1 className="text-3xl md:text-4xl font-bold text-[#002B5B]">
+            Automatizamos tu negocio para que ahorres tiempo y vendas más
+          </h1>
+          <p className="mt-4 text-lg text-[#6C757D]">
+            Pagos, agendas y respuestas 24/7 con WhatsApp API incluido.
+            Reportes claros + coaching humano para mejorar ventas y atención.
+          </p>
+          <a
+            href="https://wa.me/522228208051"
+            className="inline-block mt-6 bg-[#1E56A0] text-white px-6 py-3 rounded-lg shadow hover:bg-[#16407A] transition"
+          >
+            Quiero empezar por WhatsApp
+          </a>
+        </div>
+      </CentralContainer>
+    </section>
+  );
+}import CentralContainer from "./layout/CentralContainer";
+
+export default function Hero() {
+  return (
+    <section id="hero" className="bg-white">
+      <CentralContainer>
+        <h1 className="text-3xl md:text-4xl font-bold text-[#002B5B]">
+          Automatizamos tu negocio para que ahorres tiempo y vendas más
+        </h1>
+        <p className="mt-4 text-lg text-[#6C757D]">
+          Pagos, agendas y respuestas 24/7 con WhatsApp API incluido.
+          Reportes claros + coaching humano para mejorar ventas y atención.
+        </p>
+        <a
+          href="https://wa.me/522228208051"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-6 bg-[#1E56A0] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E56A0]"
+        >
+          Quiero empezar por WhatsApp
+        </a>
+      </CentralContainer>
+    </section>
+  );
+}
