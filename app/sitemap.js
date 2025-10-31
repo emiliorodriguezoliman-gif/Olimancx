@@ -1,3 +1,4 @@
+// app/sitemap.js
 export default function sitemap() {
   const base = process.env.NEXT_PUBLIC_SITE_URL || "https://olimancx.vercel.app";
   return [
