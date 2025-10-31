@@ -1,98 +1,64 @@
-// app/components/Packages.jsx
-import CentralContainer from "./layout/CentralContainer";
-
-const Card = ({ title, price, features, highlight = false, ctaHref }) => {
-  return (
-    <div
-      className={
-        "relative rounded-2xl border p-6 transition " +
-        (highlight
-          ? "border-[#1E56A0] shadow-md hover:shadow-lg hover:-translate-y-0.5"
-          : "hover:shadow-md hover:-translate-y-0.5")
-      }
-    >
-      {highlight && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#1E56A0] px-3 py-1 text-xs text-white">
-          Más popular
-        </span>
-      )}
-      <h3 className="text-xl font-semibold text-[#002B5B]">{title}</h3>
-      <p className="mt-1 text-2xl font-bold text-[#002B5B]">{price}</p>
-
-      <ul className="mt-4 space-y-2 text-sm text-[#6C757D]">
-        {features.map((f, i) => (
-          <li key={i} className="leading-relaxed">
-            • {f}
-          </li>
-        ))}
-      </ul>
-
-      <a
-        href={ctaHref}
-        className={
-          "mt-6 inline-block rounded-md px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-2 " +
-          (highlight
-            ? "bg-[#1E56A0] text-white hover:opacity-90 focus:ring-[#1E56A0]/50"
-            : "border border-[#1E56A0] text-[#1E56A0] hover:bg-[#1E56A0] hover:text-white focus:ring-[#1E56A0]/30")
-        }
-      >
-        Contratar por WhatsApp
-      </a>
-    </div>
-  );
-};
-
 export default function Packages() {
   return (
-    <section id="paquetes" className="bg-white">
-      <CentralContainer>
-        <h2 className="text-3xl font-bold text-[#002B5B] text-center">Paquetes</h2>
-        <p className="mt-2 text-[#6C757D] text-center">
-          Precios cerrados con licencias e IVA incluidos. El excedente de WhatsApp se cobra por mensaje adicional.
-        </p>
+    <section id="packages" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          Paquetes Oliman CX
+        </h2>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          <Card
-            title="Básico"
-            price="$3,900 MXN/mes"
-            features={[
-              "1 automatización (Pagos o Agenda).",
-              "Setup y mantenimiento incluidos.",
-              "Licencias básicas incluidas.",
-              "WhatsApp API: 200 mensajes/mes (excedente $0.10).",
-              "Reporte mensual básico."
-            ]}
-            ctaHref="https://wa.me/522228208051"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Starter */}
+          <div className="bg-white rounded-xl shadow-md p-8 border-t-4 border-blue-500">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">Starter</h3>
+            <p className="text-3xl font-bold text-blue-600 mb-6">$4,900 MXN / mes</p>
+            <ul className="space-y-2 text-gray-700 leading-relaxed">
+              <li>• WhatsApp API: <strong>200 mensajes/mes</strong> (excedente $0.10).</li>
+              <li>• Auto-respuesta 24/7, agenda básica y recordatorios.</li>
+              <li>• 1 plantilla de cobro.</li>
+              <li>• Soporte estándar (SLA &lt; 24 h por email/WhatsApp).</li>
+            </ul>
+          </div>
 
-          <Card
-            title="Pro"
-            price="$6,900 MXN/mes"
-            highlight
-            features={[
-              "2 automatizaciones.",
-              "Setup y mantenimiento incluidos.",
-              "Licencias intermedias incluidas.",
-              "WhatsApp API: 500 mensajes/mes (excedente $0.10).",
-              "Reporte + mini coaching (15 min)."
-            ]}
-            ctaHref="https://wa.me/522228208051"
-          />
+          {/* Pro */}
+          <div className="bg-white rounded-xl shadow-md p-8 border-t-4 border-blue-600">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">Pro</h3>
+            <p className="text-3xl font-bold text-blue-700 mb-6">$7,900 MXN / mes</p>
+            <ul className="space-y-2 text-gray-700 leading-relaxed">
+              <li>• WhatsApp API: <strong>500 mensajes/mes</strong> (excedente $0.10).</li>
+              <li>• Todo Starter + router multicanal de intentos y lead-scoring.</li>
+              <li>• Dashboards, fidelización (recontactos) y catálogo básico.</li>
+              <li>• Soporte prioritario (SLA &lt; 12 h) + 1 sesión mensual (30 min).</li>
+            </ul>
+          </div>
 
-          <Card
-            title="Total"
-            price="$9,900 MXN/mes"
-            features={[
-              "3 automatizaciones (Pagos + Agenda + Respuestas 24/7).",
-              "Setup y mantenimiento incluidos.",
-              "Licencias avanzadas incluidas.",
-              "WhatsApp API: 1,000 mensajes/mes (excedente $0.10).",
-              "Reporte avanzado + coaching (30 min)."
-            ]}
-            ctaHref="https://wa.me/522228208051"
-          />
+          {/* Elite */}
+          <div className="bg-white rounded-xl shadow-md p-8 border-t-4 border-blue-800">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">Elite</h3>
+            <p className="text-3xl font-bold text-blue-800 mb-6">$11,900 MXN / mes</p>
+            <ul className="space-y-2 text-gray-700 leading-relaxed">
+              <li>• WhatsApp API: <strong>1,000 mensajes/mes</strong> (excedente $0.10).</li>
+              <li>• Todo Pro + catálogos completos y flujos de pago avanzados.</li>
+              <li>• Plantillas premium y entrenamiento al equipo.</li>
+              <li>• Soporte premium (SLA &lt; 6 h) + revisión ejecutiva (60 min) y asesoría comercial ligera.</li>
+            </ul>
+          </div>
         </div>
-      </CentralContainer>
+
+        <div className="mt-12 text-center text-sm text-gray-500">
+          <p>
+            Notas: excedentes de WhatsApp = upgrade o bloques. Comisiones Stripe/MercadoPago → cliente.
+            Google Calendar sin costo adicional. Hosting + mantenimiento incluidos.
+          </p>
+        </div>
+
+        <div className="mt-8 text-center text-gray-700">
+          <h4 className="font-semibold mb-2">Implementación inicial</h4>
+          <p>
+            Etapa 1 (Inicio): $3,000 · Etapa 2 (Go-Live): $3,000 · Etapa 3 (Primer mes): $7,900 → 
+            Total <strong>$13,900 MXN</strong>
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
