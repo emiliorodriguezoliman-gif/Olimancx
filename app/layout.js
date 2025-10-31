@@ -1,4 +1,3 @@
-// app/layout.js
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -7,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Oliman CX — Automatización para vender más",
   description:
-    "Automatizamos pagos, agendas y respuestas 24/7 con WhatsApp API incluido, reportes y coaching humano.",
+    "Automatizamos pagos, agendas y respuestas 24/7 con WhatsApp API incluido. Reportes claros + coaching humano para mejorar ventas y atención.",
   metadataBase: new URL("https://olimancx.vercel.app"),
   alternates: { canonical: "https://olimancx.vercel.app" },
   openGraph: {
@@ -35,14 +34,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        {/* Respaldo (Next usa app/icon.png automáticamente) */}
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={inter.className + " bg-white text-gray-800 antialiased"}>
+      <body className={`${inter.className} bg-white antialiased`}>
         {children}
       </body>
     </html>

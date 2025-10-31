@@ -1,6 +1,46 @@
-/* app/globals.css — Tailwind v4 */
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Tus estilos globales */
-html { scroll-behavior: smooth; }
-body { background: #ffffff; color: #1f2937; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+/* ====== Tokens de marca ====== */
+:root{
+  --brand-primary:#2E53A3;          /* botón y énfasis (igual a tus capturas) */
+  --brand-primary-600:#25458A;
+  --brand-primary-700:#1F3A74;
+  --text-main:#0B1C3A;              /* títulos oscuros */
+  --text-sub:#475569;               /* párrafos */
+  --bg-soft:#F6F8FB;                /* bloques grises suaves */
+}
+
+/* Suavizado general y anclas suaves */
+html{ scroll-behavior:smooth; }
+body{ color:var(--text-main); }
+
+/* Botón primario consistente (idéntico en todo el sitio) */
+.btn-primary{
+  @apply inline-flex items-center justify-center rounded-xl px-6 py-3 text-white font-medium shadow-sm transition;
+  background:var(--brand-primary);
+}
+.btn-primary:hover{ background:var(--brand-primary-600); }
+.btn-outline{
+  @apply inline-flex items-center justify-center rounded-xl px-6 py-3 font-medium border transition;
+  color:var(--brand-primary);
+  border-color:var(--brand-primary);
+}
+.btn-outline:hover{
+  color:#fff; background:var(--brand-primary); border-color:transparent;
+}
+
+/* Tarjeta suave con borde (Soluciones/Paquetes) */
+.card{
+  @apply rounded-2xl border bg-white;
+  border-color:#E2E8F0;
+}
+
+/* Separador fino del footer */
+.hr-soft{ border-top:1px solid #E7ECF4; }
+
+/* Corrección iOS para el botón flotante (suaviza sombra) */
+.fab-shadow{
+  box-shadow: 0 12px 20px rgba(45, 153, 80, .18), 0 4px 8px rgba(45, 153, 80, .14);
+}

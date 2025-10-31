@@ -1,14 +1,15 @@
-// app/components/FloatingWhatsapp.jsx
-export default function FloatingWhatsapp() {
+"use client";
+export default function FloatingWhatsapp(){
   return (
     <a
       href="https://wa.me/522228208051"
-      className="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 transition animate-[pulse_2s_ease-in-out_infinite]"
-      aria-label="Abrir WhatsApp"
       target="_blank"
-      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+      className="fixed z-50 bottom-6 right-6 h-14 w-14 rounded-full bg-[#25D366] fab-shadow flex items-center justify-center"
     >
-      💬
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="#fff" aria-hidden="true">
+        <path d="M19.11 17.39c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13s-.67.84-.83 1.02-.3.19-.56.06a8.89 8.89 0 0 1-2.61-1.61 9.77 9.77 0 0 1-1.81-2.24c-.19-.32 0-.5.14-.68.14-.17.32-.44.48-.66.16-.22.21-.38.32-.64.11-.26.05-.48-.02-.67-.07-.19-.58-1.4-.8-1.92-.21-.51-.43-.44-.58-.45-.15-.01-.32-.01-.49-.01-.17 0-.44.06-.68.31-.24.26-.9.88-.9 2.14 0 1.26.93 2.49 1.06 2.66.13.17 1.82 2.78 4.4 3.9 2.59 1.12 2.59.75 3.06.72.47-.03 1.53-.62 1.75-1.22.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.31z"/>
+      </svg>
     </a>
   );
 }

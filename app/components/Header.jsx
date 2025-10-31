@@ -1,38 +1,32 @@
-// app/components/Header.jsx
-import Image from "next/image";
-import CentralContainer from "./layout/CentralContainer";
-import MobileNav from "./MobileNav";
+"use client";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default function Header() {
+export default function Header(){
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(()=>{
+    const onScroll=()=> setScrolled(window.scrollY>4);
+    onScroll(); window.addEventListener("scroll", onScroll);
+    return ()=> window.removeEventListener("scroll", onScroll);
+  },[]);
+
   return (
-    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
-      <CentralContainer>
-        <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 py-3">
-            <Image src="/brand/favicon.png" alt="Oliman CX" width={28} height={28} className="object-contain" priority />
-            <span className="font-semibold text-[#002B5B]">Oliman CX</span>
-          </a>
+    <header className={`sticky top-0 z-40 backdrop-blur bg-white/85 border-b ${scrolled ? "border-[#E7ECF4]" : "border-transparent"}`}>
+      <div className="mx-auto max-w-6xl px-5 md:px-6 h-16 md:h-18 flex items-center justify-between">
+        <Link href="#top" className="flex items-center gap-2">
+          <img src="/brand/favicon.png" alt="Oliman CX" className="h-6 w-6"/>
+          <span className="font-semibold">Oliman CX</span>
+        </Link>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#quienes" className="hover:text-[#1E56A0]">Quiénes somos</a>
-            <a href="#soluciones" className="hover:text-[#1E56A0]">Soluciones</a>
-            <a href="#beneficios" className="hover:text-[#1E56A0]">Beneficios</a>
-            <a href="#paquetes" className="hover:text-[#1E56A0]">Paquetes</a>
-            <a href="#contacto" className="hover:text-[#1E56A0]">Contacto</a>
-          </nav>
-
-          {/* Desktop CTA */}
-          <a
-            href="https://wa.me/522228208051"
-            className="hidden md:inline-block rounded-md bg-[#1E56A0] text-white px-4 py-2 text-sm hover:opacity-90"
-          >
-            WhatsApp
-          </a>
-
-          {/* Mobile hamburger */}
-          <MobileNav />
-        </div>
-      </CentralContainer>
+        <nav className="hidden md:flex items-center gap-8 text-[15px]">
+          <a href="#about" className="hover:opacity-80">Quiénes somos</a>
+          <a href="#solutions" className="hover:opacity-80">Soluciones</a>
+          <a href="#benefits" className="hover:opacity-80">Beneficios</a>
+          <a href="#paquetes" className="hover:opacity-80">Paquetes</a>
+          <a href="#contacto" className="hover:opacity-80">Contacto</a>
+          <a href="https://wa.me/522228208051" target="_blank" className="btn-primary">WhatsApp</a>
+        </nav>
+      </div>
     </header>
   );
 }
