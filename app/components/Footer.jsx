@@ -17,7 +17,7 @@ export default function Footer() {
             <h4 className="font-semibold text-[#002B5B]">Contacto</h4>
             <ul className="mt-2 space-y-1 text-[#6C757D]">
               <li>WhatsApp: <a className="text-[#1E56A0]" href="https://wa.me/522228208051">+52 222 820 8051</a></li>
-              <li>Email: <a className="text-[#1E56A0]" href="mailto:emilio.rodriguez.oliman@gmail.com">emilio.rodriguez.oliman@gmail.com</a></li>
+              <li>Email: <a className="text-[#1E56A0]" href="mailto:oibot@olimancx.com">oibot@olimancx.com</a></li>
             </ul>
           </div>
 
