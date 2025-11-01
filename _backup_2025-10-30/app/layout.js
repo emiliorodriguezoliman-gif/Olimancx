@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Oliman CX — Automatización para vender más",
   description:
-    "Automatizamos pagos, agendas y respuestas 24/7 con WhatsApp API incluido. Reportes claros + coaching humano para mejorar ventas y atención.",
+    "Automatizamos pagos, agendas y respuestas 24/7 con WhatsApp API incluido, reportes claros y coaching humano para mejorar ventas y atención.",
   metadataBase: new URL("https://olimancx.vercel.app"),
   alternates: { canonical: "https://olimancx.vercel.app" },
   openGraph: {
@@ -19,12 +19,30 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Oliman CX",
+    telephone: "+52 222 820 8051",
+    email: "oibot@olimancx.com",
+    url: "https://olimancx.vercel.app",
+    logo: "/brand/favicon.png",
+    areaServed: "MX",
+    description:
+      "Pagos, agendas y respuestas 24/7 con coaching humano y reportes.",
+  };
+
   return (
     <html lang="es" className="scroll-smooth">
       <head>
+        {/* Respaldo (Next usa app/icon.png automáticamente) */}
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
-      <body className={`${inter.className} bg-white text-gray-800 antialiased`}>
+      <body className={inter.className + " bg-white text-gray-800 antialiased"}>
         {children}
       </body>
     </html>

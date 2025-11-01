@@ -1,5 +1,5 @@
 // app/page.js
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Solutions from "./components/Solutions";
@@ -12,15 +12,19 @@ import FloatingWhatsapp from "./components/FloatingWhatsapp";
 export default function Page() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />        {/* Quiénes antes de Soluciones (como pediste) */}
-      <Solutions />
-      <Benefits />
-      <Packages />
-      <Contact />
+      <Header />
+      <main>
+        <Hero />
+        <About />        {/* Quiénes antes de Soluciones */}
+        <Solutions />
+        <Benefits />
+        <Packages />
+        {/* <Cases /> */}  {/* comenta si aún no quieres casos */}
+        <Contact />
+      </main>
       <Footer />
       <FloatingWhatsapp />
     </>
   );
 }
+<Contact />

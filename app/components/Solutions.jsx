@@ -1,46 +1,39 @@
-import Central from "./layout/CentralContainer";
+// app/components/Solutions.jsx
+import CentralContainer from "./layout/CentralContainer";
 
 const items = [
-  {
-    emoji: "💳",
-    title: "Pagos Automáticos",
-    text: "Links de pago, recordatorios y confirmación automática para cobrar a tiempo."
-  },
-  {
-    emoji: "📅",
-    title: "Agendas Inteligentes",
-    text: "Reservas online con recordatorios y reprogramación que reduce no-shows."
-  },
-  {
-    emoji: "🤖",
-    title: "Respuestas 24/7",
-    text: "Bot en WhatsApp o web para FAQ y captura de leads, con escalamiento a humano."
-  },
+  { emoji: "💳", title: "Pagos Automáticos", text: "Links de pago, recordatorios y confirmación automática para cobrar a tiempo." },
+  { emoji: "📆", title: "Agendas Inteligentes", text: "Reservas online con recordatorios y reprogramación que reduce no-shows." },
+  { emoji: "🤖", title: "Respuestas 24/7", text: "Bot en WhatsApp o web para FAQ y captura de leads, con escalamiento a humano." },
 ];
 
-export default function Solutions(){
+export default function Solutions() {
   return (
-    <Central id="solutions" className="py-14 md:py-18 bg-white">
-      <div className="mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold">Soluciones</h2>
-        <p className="mt-2 text-[17px] text-[var(--text-sub)]">
+    <section
+      id="soluciones"
+      className="scroll-mt-28 md:scroll-mt-32 bg-white py-16 md:py-20"
+    >
+      <CentralContainer>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#002B5B] text-center">
+          Soluciones
+        </h2>
+        <p className="mt-4 text-[#6C757D] max-w-3xl mx-auto text-center">
           Tecnología + coaching humano para resultados medibles.
         </p>
-      </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
-        {items.map((c,i)=>(
-          <div key={i} className="card p-6 md:p-7">
-            <div className="text-4xl">{c.emoji}</div>
-            <h3 className="mt-4 text-xl font-semibold">{c.title}</h3>
-            <p className="mt-2 text-[var(--text-sub)]">{c.text}</p>
-
-            <a href="#contacto" className="btn-primary mt-6 w-full md:w-auto">
-              Quiero este servicio
-            </a>
-          </div>
-        ))}
-      </div>
-    </Central>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {items.map((it) => (
+            <div
+              key={it.title}
+              className="rounded-2xl border border-[#E2E8F0] bg-white p-6 transition hover:shadow-md hover:-translate-y-0.5"
+            >
+              <div className="text-3xl">{it.emoji}</div>
+              <h3 className="mt-3 text-xl font-semibold text-[#002B5B]">{it.title}</h3>
+              <p className="mt-2 text-[#334155]">{it.text}</p>
+            </div>
+          ))}
+        </div>
+      </CentralContainer>
+    </section>
   );
 }

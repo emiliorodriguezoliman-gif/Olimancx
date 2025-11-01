@@ -1,32 +1,53 @@
-export default function Footer(){
+// app/components/Footer.jsx
+import Image from "next/image";
+import CentralContainer from "./layout/CentralContainer";
+
+export default function Footer() {
   return (
-    <footer className="pt-10">
-      <div className="hr-soft" />
-      <div className="mx-auto max-w-6xl px-5 md:px-6 py-8 grid md:grid-cols-3 gap-6 text-[15px]">
-        <div>
-          <div className="font-semibold">Oliman CX</div>
-          <p className="mt-2 text-[var(--text-sub)]">
-            Eficiencia con toque humano: automatizamos pagos, agendas y respuestas 24/7.
-          </p>
+    <footer className="border-t border-line pt-12 pb-14">
+      <CentralContainer className="text-center">
+        {/* LOGO: usar favicon (hexágono) */}
+        <div className="mb-3 flex justify-center">
+          <Image
+            src="/brand/favicon.png"     // <- favicon, no OI
+            alt="Oliman CX"
+            width={42}
+            height={42}
+            priority
+          />
         </div>
-        <div>
-          <div className="font-semibold">Contacto</div>
-          <p className="mt-2">
-            WhatsApp: <a className="underline" href="https://wa.me/522228208051">+52 222 820 8051</a><br/>
-            Email: <a className="underline" href="mailto:oibot@olimancx.com">oibot@olimancx.com</a>
-          </p>
-        </div>
-        <div>
-          <div className="font-semibold">Legal</div>
-          <p className="mt-2 space-x-3">
-            <a className="underline" href="/aviso-de-privacidad">Aviso de privacidad</a>
-            <a className="underline" href="/terminos-y-condiciones">Términos y condiciones</a>
-          </p>
-        </div>
-      </div>
-      <div className="text-center text-sm text-[var(--text-sub)] pb-6">
-        WhatsApp API con cuota incluida y excedente transparente.
-      </div>
+
+        <h3 className="text-xl font-semibold text-primary">Oliman CX</h3>
+
+        <p className="mt-3 text-muted-foreground">
+          © 2025 Oliman CX — Eficiencia con toque humano.
+        </p>
+
+        <p className="mt-1 text-muted-foreground">
+          WhatsApp API con cuota incluida y excedente transparente.
+          <span className="mx-2">·</span>
+          <a href="/robots.txt" className="underline">robots.txt</a>
+          <span className="mx-2">·</span>
+          <a href="/sitemap.xml" className="underline">sitemap.xml</a>
+          <span className="mx-2">·</span>
+          <a href="#contacto" className="underline">Contacto</a>
+        </p>
+
+        <p className="mt-6 text-[13px] leading-relaxed text-muted-foreground">
+          Aviso legal: Los planes incluyen licencias base y mantenimiento.
+          Excedentes por consumo de WhatsApp y comisiones de pasarela se cobran
+          aparte cuando aplique. La información mostrada no constituye oferta
+          irrevocable y puede cambiar.
+        </p>
+<div className="mt-2">
+  <a
+    href="/legal/aviso-privacidad"
+    className="text-sm text-[#1E56A0] underline hover:text-[#002B5B]"
+  >
+    Aviso de privacidad
+  </a>
+</div>     
+ </CentralContainer>
     </footer>
   );
 }

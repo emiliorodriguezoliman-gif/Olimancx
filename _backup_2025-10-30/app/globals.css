@@ -1,0 +1,6 @@
+/* app/globals.css — Tailwind v4 */
+@import "tailwindcss";
+
+/* Tus estilos globales */
+html { scroll-behavior: smooth; }
+body { background: #ffffff; color: #1f2937; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }

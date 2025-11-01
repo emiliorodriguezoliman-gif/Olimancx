@@ -1,9 +1,8 @@
-export default function CentralContainer({ className = "", children, id }) {
+// app/components/layout/CentralContainer.jsx
+export default function CentralContainer({ children, className = "" }) {
   return (
-    <section id={id} className={className}>
-      <div className="mx-auto w-full max-w-6xl px-5 md:px-6">
-        {children}
-      </div>
-    </section>
+    <div className={`max-w-6xl mx-auto px-5 ${className}`}>
+      {children}
+    </div>
   );
 }

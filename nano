@@ -1,22 +1,6 @@
-// app/components/FloatingWhatsapp.jsx
 "use client";
-import { useEffect, useState } from "react";
 
 export default function FloatingWhatsapp() {
-  // Guard contra montajes múltiples
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    // Si ya existe una instancia montada, no renderizar otra
-    if (typeof window !== "undefined") {
-      if (window.__waMounted) return;       // ← ya hay uno
-      window.__waMounted = true;            // ← primera vez, marcar
-      setEnabled(true);
-    }
-  }, []);
-
-  if (!enabled) return null;
-
   return (
     <a
       href="https://wa.me/522228208051?text=Hola%20Oliman%20CX,%20quiero%20automatizar%20mi%20negocio"
@@ -25,7 +9,7 @@ export default function FloatingWhatsapp() {
       aria-label="Hablar por WhatsApp con Oliman CX"
       className="fixed right-5 bottom-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg shadow-black/10 ring-1 ring-black/5 transition hover:scale-[1.05] active:scale-[0.98]"
     >
-      {/* SVG limpio (mejor que PNG con fondo) */}
+      {/* SVG limpio, sin fondo cuadrado */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="white"

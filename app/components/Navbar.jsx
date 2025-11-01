@@ -1,29 +1,40 @@
-// app/components/Navbar.jsx
 "use client";
-import Link from "next/link";
+
 import CentralContainer from "./layout/CentralContainer";
 
 export default function Navbar() {
-  const linkCls =
-    "text-[#0F2442] hover:text-[#1E3668] transition-colors text-sm md:text-base";
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
-      <CentralContainer className="h-14 md:h-16 flex items-center justify-between">
-        <Link href="#top" className="flex items-center gap-2">
-          <img src="/brand/favicon.png" alt="" className="h-5 w-5" />
-          <span className="font-semibold text-[#0F2442]">Oliman CX</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          <a href="#quienes" className={linkCls}>Quiénes somos</a>
-          <a href="#soluciones" className={linkCls}>Soluciones</a>
-          <a href="#beneficios" className={linkCls}>Beneficios</a>
-          <a href="#paquetes" className={linkCls}>Paquetes</a>
-          <a href="#contacto" className={linkCls}>Contacto</a>
+    <header
+      id="top"
+      className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line"
+    >
+      <CentralContainer className="flex items-center justify-between h-14">
+        {/* Marca (favicon + nombre) */}
+        <a href="#top" className="flex items-center gap-2">
+          {/* Usa el favicon pequeño, NO el OI grande */}
+          <img
+            src="/favicon.ico"
+            alt="Oliman CX favicon"
+            width={24}
+            height={24}
+            className="rounded-sm"
+          />
+          <span className="font-semibold text-[#002B5B]">Oliman CX</span>
+        </a>
+
+        {/* Menú desktop */}
+        <nav className="hidden md:flex items-center gap-8 text-[15px] text-slate-700">
+          <a href="#quienes" className="hover:text-[#1E3A8A]">Quiénes</a>
+          <a href="#soluciones" className="hover:text-[#1E3A8A]">Soluciones</a>
+          <a href="#beneficios" className="hover:text-[#1E3A8A]">Beneficios</a>
+          <a href="#paquetes" className="hover:text-[#1E3A8A]">Paquetes</a>
+          <a href="#contacto" className="hover:text-[#1E3A8A]">Contacto</a>
         </nav>
+
+        {/* CTA (si lo usas como ancla interna) */}
         <a
-          href="https://wa.me/522228208051"
-          target="_blank"
-          className="rounded-md px-4 py-2 text-white bg-[#2F5197]"
+          href="#contacto"
+          className="hidden md:inline-block px-4 py-2 rounded-lg bg-[#294F8A] text-white"
         >
           WhatsApp
         </a>
