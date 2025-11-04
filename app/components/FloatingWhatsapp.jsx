@@ -1,40 +1,26 @@
-// app/components/FloatingWhatsapp.jsx
 "use client";
-import { useEffect, useState } from "react";
 
 export default function FloatingWhatsapp() {
-  // Guard contra montajes múltiples
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    // Si ya existe una instancia montada, no renderizar otra
-    if (typeof window !== "undefined") {
-      if (window.__waMounted) return;       // ← ya hay uno
-      window.__waMounted = true;            // ← primera vez, marcar
-      setEnabled(true);
-    }
-  }, []);
-
-  if (!enabled) return null;
+  const number = "522228208051";
+  const message = encodeURIComponent("Hola, me gustaría recibir información.");
+  const href = `https://wa.me/${number}?text=${message}`;
 
   return (
     <a
-      href="https://wa.me/522228208051?text=Hola%20Oliman%20CX,%20quiero%20automatizar%20mi%20negocio"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Hablar por WhatsApp con Oliman CX"
-      className="fixed right-5 bottom-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg shadow-black/10 ring-1 ring-black/5 transition hover:scale-[1.05] active:scale-[0.98]"
+      aria-label="Hablar por WhatsApp"
+      className="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg hover:scale-105 transition-transform"
     >
-      {/* SVG limpio (mejor que PNG con fondo) */}
+      {/* Ícono SVG sin fondo */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill="white"
-        viewBox="0 0 24 24"
-        width="28"
-        height="28"
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        className="w-7 h-7 text-white"
       >
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.472-.149-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.098 3.2 5.077 4.487.709.306 1.262.489 1.693.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-        <path d="M20.52 3.48A11.8 11.8 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.19 1.6 6.01L0 24l6.213-1.582A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12a11.8 11.8 0 00-3.48-8.52zM12 22.083a9.948 9.948 0 01-5.083-1.396l-.364-.216-3.686.939.983-3.59-.237-.37A9.923 9.923 0 012.999 12c0-5.514 4.486-9.999 10-9.999A9.94 9.94 0 0122 12c0 5.514-4.486 10.083-10 10.083z" />
+        <path d="M16.001 3.2C9.373 3.2 4 8.573 4 15.2c0 2.732.87 5.268 2.414 7.392L4 28.8l6.447-2.367A11.914 11.914 0 0 0 16.001 27.2c6.627 0 12-5.373 12-12S22.628 3.2 16.001 3.2zm0 21.6a9.59 9.59 0 0 1-4.892-1.35l-.35-.208-3.822 1.404 1.36-3.88-.228-.36A9.555 9.555 0 0 1 6.4 15.2c0-5.283 4.318-9.6 9.601-9.6 5.283 0 9.6 4.317 9.6 9.6 0 5.283-4.317 9.6-9.6 9.6zm5.305-7.196c-.291-.145-1.72-.848-1.987-.946-.268-.098-.463-.145-.657.145-.194.291-.754.946-.924 1.141-.171.194-.34.218-.63.073-.291-.145-1.228-.453-2.34-1.445-.865-.771-1.448-1.725-1.619-2.015-.171-.291-.018-.449.128-.593.131-.131.291-.34.437-.512.145-.171.194-.292.291-.486.098-.194.049-.364-.025-.512-.073-.145-.657-1.582-.901-2.162-.238-.57-.48-.492-.657-.5-.17-.007-.364-.009-.558-.009s-.512.073-.781.365c-.268.291-1.026 1.002-1.026 2.445 0 1.443 1.051 2.84 1.197 3.033.145.194 2.07 3.162 5.02 4.432.703.303 1.252.483 1.678.618.704.224 1.345.192 1.851.117.565-.085 1.72-.702 1.963-1.38.242-.679.242-1.262.169-1.38-.072-.117-.266-.19-.557-.334z" />
       </svg>
     </a>
   );

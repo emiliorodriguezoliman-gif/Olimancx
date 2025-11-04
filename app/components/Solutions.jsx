@@ -9,10 +9,7 @@ const items = [
 
 export default function Solutions() {
   return (
-    <section
-      id="soluciones"
-      className="scroll-mt-28 md:scroll-mt-32 bg-white py-16 md:py-20"
-    >
+   <section id="soluciones" className="section-pad surface-white">
       <CentralContainer>
         <h2 className="text-3xl md:text-4xl font-bold text-[#002B5B] text-center">
           Soluciones

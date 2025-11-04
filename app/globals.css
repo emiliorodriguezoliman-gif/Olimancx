@@ -34,3 +34,80 @@ body {
 
 /* Separador en footer */
 .hr { @apply border-t border-line; }
+
+/* === Premium polish (no rompe estructura) === */
+@layer utilities {
+  .section-pad {
+    @apply scroll-mt-28 md:scroll-mt-32 pt-16 md:pt-24 pb-12 md:pb-20;
+  }
+
+  .surface-white {
+    @apply bg-white;
+  }
+  .surface-soft {
+    background: #F6F8FC;
+  }
+
+  .divider {
+    @apply border-t border-[#E6ECF5];
+  }
+
+  .container-pro {
+    @apply max-w-6xl mx-auto px-5;
+  }
+
+  .card-pro {
+    @apply rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm transition;
+  }
+  .card-pro:hover {
+    @apply shadow-md -translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold text-white transition;
+    background: #1E56A0;
+  }
+  .btn-primary:hover {
+    filter: brightness(1.05);
+  }
+
+  .chip {
+    @apply inline-block rounded-full px-3 py-1 text-xs font-medium;
+    background: #E9F5ED; /* verde suave */
+    color: #186A3B;
+  }
+
+  /* Texto refinado */
+  .h-title {
+    @apply text-3xl md:text-4xl font-bold text-[#002B5B] tracking-tight text-balance;
+  }
+  .p-lead {
+    @apply mt-4 text-lg text-[#6C757D];
+  }
+
+  /* Footer legal línea fina */
+  .footer-legal {
+    @apply text-[12px] text-[#6C757D];
+  }
+}
+
+/* Flotante WA armonizado (si usas <img>) */
+.floating-wa {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  z-index: 60;
+}
+.floating-wa img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Suaviza el cambio de fondo entre secciones */
+.section-gradient-soft {
+  background: linear-gradient(180deg, #F6F8FC 0%, #FFFFFF 100%);
+}

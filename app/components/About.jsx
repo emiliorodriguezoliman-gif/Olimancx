@@ -3,10 +3,7 @@ import CentralContainer from "./layout/CentralContainer";
 
 export default function About() {
   return (
-    <section
-      id="quienes"
-      className="scroll-mt-28 md:scroll-mt-32 bg-white py-16 md:py-20"
-    >
+   <section id="quienes" className="section-pad surface-soft">
       <CentralContainer>
         <h2 className="text-3xl md:text-4xl font-bold text-[#002B5B] text-center">
           Quiénes somos

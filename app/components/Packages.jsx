@@ -10,10 +10,7 @@ const Nota = () => (
 
 export default function Packages() {
   return (
-    <section
-      id="paquetes"
-      className="scroll-mt-28 md:scroll-mt-32 bg-[#F6F8FB] py-16 md:py-20"
-    >
+    <section id="paquetes" className="section-pad surface-white">
       <CentralContainer>
         <h2 className="text-3xl md:text-4xl font-bold text-[#002B5B] text-center">
           Paquetes Oliman CX
