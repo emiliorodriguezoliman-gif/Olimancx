@@ -5,15 +5,15 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Oliman CX — Automatización para vender más",
+  title: "Oliman CX",
   description:
-    "Automatizamos pagos, agendas y respuestas 24/7 con WhatsApp API incluido. Reportes claros + coaching humano para mejorar ventas y atención.",
+    "Consultoría y mejora de procesos con enfoque humano. Orden, claridad y eficiencia para que tu negocio crezca.",
   metadataBase: new URL("https://olimancx.vercel.app"),
   alternates: { canonical: "https://olimancx.vercel.app" },
   openGraph: {
-    title: "Oliman CX — Automatización con toque humano",
+    title: "Oliman CX",
     description:
-      "Pagos, agendas y respuestas 24/7 + coaching. Más ventas con menos esfuerzo.",
+      "Consultoría profesional, procesos claros y acompañamiento humano para hacer crecer tu negocio.",
     images: [{ url: "/brand/oi.png", width: 600, height: 600 }],
   },
 };

@@ -9,7 +9,7 @@ export default function Contact() {
           Contacto
         </h2>
         <p className="mt-4 text-[#6C757D] max-w-2xl mx-auto text-center">
-          ¿Listo para automatizar? Escríbenos por WhatsApp o envíanos tu correo.
+          ¿Listo para dar claridad y orden a tu negocio? Escríbenos por WhatsApp o envíanos tu correo.
         </p>
 
         <div className="mt-6 flex items-center justify-center gap-3">
@@ -17,10 +17,10 @@ export default function Contact() {
             href="https://wa.me/522228208051"
             className="inline-flex items-center justify-center bg-[#1E56A0] text-white px-5 py-3 rounded-md"
           >
-            Hablar por WhatsApp
+            Agenda tu diagnóstico
           </a>
           <a
-            href="mailto:oibot@olimancx.com"
+            href="mailto:contacto@olimancx.com"
             className="inline-flex items-center justify-center border border-[#1E56A0] text-[#1E56A0] px-5 py-3 rounded-md"
           >
             Enviar correo

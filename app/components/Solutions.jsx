@@ -2,9 +2,9 @@
 import CentralContainer from "./layout/CentralContainer";
 
 const items = [
-  { emoji: "💳", title: "Pagos Automáticos", text: "Links de pago, recordatorios y confirmación automática para cobrar a tiempo." },
-  { emoji: "📆", title: "Agendas Inteligentes", text: "Reservas online con recordatorios y reprogramación que reduce no-shows." },
-  { emoji: "🤖", title: "Respuestas 24/7", text: "Bot en WhatsApp o web para FAQ y captura de leads, con escalamiento a humano." },
+  { emoji: "🧭", title: "Diagnóstico Claro", text: "Identificamos qué está frenando tu negocio y cuál es el orden correcto para mejorar." },
+  { emoji: "📋", title: "Procesos Claros", text: "Diseñamos e implementamos procesos simples y humanos para atención, ventas y operación." },
+  { emoji: "🤝", title: "Acompañamiento", text: "Te guiamos paso a paso para mantener el orden, corregir desviaciones y mejorar resultados." },
 ];
 
 export default function Solutions() {
@@ -15,7 +15,7 @@ export default function Solutions() {
           Soluciones
         </h2>
         <p className="mt-4 text-[#6C757D] max-w-3xl mx-auto text-center">
-          Tecnología + coaching humano para resultados medibles.
+          Consultoría humana y práctica para ordenar tu operación, fortalecer tus ventas y darte claridad.
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">

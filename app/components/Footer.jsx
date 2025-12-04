@@ -25,8 +25,7 @@ export default function Footer() {
               <h3 className="text-lg font-semibold text-[#0F1E3B]">Oliman CX</h3>
             </div>
             <p className="mt-3 text-[#475569]">
-              Eficiencia con toque humano: automatizamos pagos, agendas y
-              respuestas 24/7 con reportes claros + coaching aplicado.
+              Consultoría en procesos, ventas y atención al cliente para pymes. Claridad, orden y acompañamiento humano.
             </p>
           </div>
 
@@ -46,10 +45,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:oibot@olimancx.com"
+                  href="mailto:contacto@olimancx.com"
                   className="hover:text-[#1E56A0] underline-offset-4 hover:underline"
                 >
-                  oibot@olimancx.com
+                  contacto@olimancx.com
                 </a>
               </li>
             </ul>
@@ -85,10 +84,7 @@ export default function Footer() {
         {/* Tira inferior */}
         <div className="flex flex-col items-center gap-3 text-center md:flex-row md:justify-between md:text-left">
           <p className="text-sm text-[#475569]">
-            © {new Date().getFullYear()} Oliman CX — Eficiencia con toque humano.
-          </p>
-          <p className="text-xs text-[#64748B]">
-            WhatsApp API con cuota incluida y excedente transparente.
+            © {new Date().getFullYear()} Oliman CX — Procesos claros. Ventas claras. Rumbo claro.
           </p>
         </div>
       </div>

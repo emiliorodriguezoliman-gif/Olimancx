@@ -1,13 +1,6 @@
 // app/components/Packages.jsx
 import CentralContainer from "./layout/CentralContainer";
 
-const Nota = () => (
-  <p className="mt-3 text-xs text-[#6C757D]">
-    Precios cerrados con licencias e IVA incluidos. Excedentes de WhatsApp: upgrade de plan o cargo por bloques.
-    Comisiones de Stripe/MercadoPago las asume el cliente. Google Calendar sin costo adicional.
-  </p>
-);
-
 export default function Packages() {
   return (
     <section id="paquetes" className="section-pad surface-white">
@@ -18,88 +11,62 @@ export default function Packages() {
 
         {/* Grid */}
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {/* Starter */}
+
+          {/* Paquete 1 */}
           <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-[#002B5B]">Starter</h3>
-            <p className="mt-2 text-3xl font-extrabold text-[#1E56A0]">
-              $4,900 <span className="text-sm text-[#6C757D]">MXN/mes</span>
+            <h3 className="text-xl font-semibold text-[#002B5B]">
+              Diagnóstico Claro · Rumbo Claro
+            </h3>
+            <p className="mt-2 text-[#334155] text-sm leading-relaxed">
+              Identificamos qué está frenando tu negocio, qué procesos faltan y cuál es el orden correcto para mejorar.
+              <br /> <br />
+              Totalmente personalizado según tu sector y tamaño.
             </p>
-            <ul className="mt-4 space-y-2 text-[#334155]">
-              <li>• WhatsApp API incluido (hasta 100 conversaciones/mes).</li>
-              <li>• Auto-respuesta 24/7, agenda básica, recordatorios.</li>
-              <li>• 1 plantilla de cobro.</li>
-              <li>• Soporte estándar (SLA &lt;24h).</li>
-            </ul>
-            <Nota />
             <a
-              href="https://wa.me/522228208051?text=Quiero%20el%20plan%20Starter"
+              href="https://wa.me/522228208051?text=Quiero%20el%20Diagn%C3%B3stico%20Claro"
               className="mt-6 inline-flex items-center justify-center bg-[#1E56A0] text-white px-5 py-3 rounded-md"
             >
-              Contratar por WhatsApp
+              Solicitar información
             </a>
           </div>
 
-          {/* Pro */}
+          {/* Paquete 2 */}
           <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-[#002B5B]">Pro</h3>
-            <p className="mt-2 text-3xl font-extrabold text-[#1E56A0]">
-              $7,900 <span className="text-sm text-[#6C757D]">MXN/mes</span>
+            <h3 className="text-xl font-semibold text-[#002B5B]">
+              Procesos Claros · Ventas Claras
+            </h3>
+            <p className="mt-2 text-[#334155] text-sm leading-relaxed">
+              Diseñamos e implementamos procesos reales para atención, ventas y operación. 
+              <br /><br />
+              Incluye herramientas prácticas y capacitación, adaptado completamente a las necesidades de tu negocio.
             </p>
-            <ul className="mt-4 space-y-2 text-[#334155]">
-              <li>• Todo Starter + router de intentos, lead-scoring, dashboards.</li>
-              <li>• Fidelización (re-contactos), catálogo básico.</li>
-              <li>• WhatsApp hasta 300 conversaciones/mes.</li>
-              <li>• Soporte prioritario (SLA &lt;12h) + 1 sesión de optimización (30 min).</li>
-            </ul>
-            <Nota />
             <a
-              href="https://wa.me/522228208051?text=Quiero%20el%20plan%20Pro"
+              href="https://wa.me/522228208051?text=Quiero%20Procesos%20Claros%20y%20Ventas%20Claras"
               className="mt-6 inline-flex items-center justify-center bg-[#1E56A0] text-white px-5 py-3 rounded-md"
             >
-              Contratar por WhatsApp
+              Solicitar información
             </a>
           </div>
 
-          {/* Elite */}
+          {/* Fase 3 */}
           <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-[#002B5B]">Elite</h3>
-            <p className="mt-2 text-3xl font-extrabold text-[#1E56A0]">
-              $11,900 <span className="text-sm text-[#6C757D]">MXN/mes</span>
+            <h3 className="text-xl font-semibold text-[#002B5B]">
+              Acompañamiento Mensual Personalizado
+            </h3>
+            <p className="mt-2 text-[#334155] text-sm leading-relaxed">
+              Te acompañamos mes a mes para mantener orden, corregir desviaciones y mejorar resultados.
+              <br /><br />
+              Cada mes se ajusta según las necesidades reales de tu empresa.
             </p>
-            <ul className="mt-4 space-y-2 text-[#334155]">
-              <li>• Todo Pro + catálogos completos y flujos de pago avanzados.</li>
-              <li>• Plantillas premium y entrenamiento al equipo.</li>
-              <li>• WhatsApp hasta 600 conversaciones/mes.</li>
-              <li>• Soporte premium (SLA &lt;6h) + revisión ejecutiva (60 min).</li>
-            </ul>
-            <Nota />
             <a
-              href="https://wa.me/522228208051?text=Quiero%20el%20plan%20Elite"
+              href="https://wa.me/522228208051?text=Quiero%20Acompa%C3%B1amiento%20Mensual%20Personalizado"
               className="mt-6 inline-flex items-center justify-center bg-[#1E56A0] text-white px-5 py-3 rounded-md"
             >
-              Contratar por WhatsApp
+              Solicitar información
             </a>
           </div>
+
         </div>
-
-        {/* Implementación y activación del servicio */}
-<div className="mt-10 rounded-xl border border-[#E2E8F0] bg-white p-6">
-  <h4 className="text-lg font-semibold text-[#002B5B]">
-    Implementación y activación del servicio
-  </h4>
-
-  <ul className="mt-3 space-y-2 text-[#334155] text-sm">
-    <li>✔️ <strong>Inicio:</strong> se realiza con un anticipo del 50 % para cubrir la configuración y personalización inicial.</li>
-    <li>✔️ <strong>Go-Live:</strong> el 50 % restante se liquida antes de la entrega final y puesta en marcha del sistema.</li>
-    <li>✔️ <strong>Activación mensual:</strong> corresponde al plan vigente contratado (Starter, Pro o Elite) una vez que el bot comienza a operar con clientes reales.</li>
-  </ul>
-
-  <p className="mt-2 text-xs text-[#6C757D] leading-relaxed">
-    Los pagos incluyen licencias base, hosting y mantenimiento indicados en cada plan.
-    Cualquier excedente de uso, comisión de pasarela o servicio adicional se cotiza por separado.
-    Precios en MXN y sujetos a actualización conforme a las condiciones comerciales de Oliman CX.
-  </p>
-</div>
       </CentralContainer>
     </section>
   );

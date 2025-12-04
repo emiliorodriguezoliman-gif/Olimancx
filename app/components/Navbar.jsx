@@ -9,9 +9,8 @@ export default function Navbar() {
       className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line"
     >
       <CentralContainer className="flex items-center justify-between h-14">
-        {/* Marca (favicon + nombre) */}
+        {/* Marca */}
         <a href="#top" className="flex items-center gap-2">
-          {/* Usa el favicon pequeño, NO el OI grande */}
           <img
             src="/favicon.ico"
             alt="Oliman CX favicon"
@@ -25,13 +24,13 @@ export default function Navbar() {
         {/* Menú desktop */}
         <nav className="hidden md:flex items-center gap-8 text-[15px] text-slate-700">
           <a href="#quienes" className="hover:text-[#1E3A8A]">Quiénes</a>
-          <a href="#soluciones" className="hover:text-[#1E3A8A]">Soluciones</a>
+          <a href="#soluciones" className="hover:text-[#1E3A8A]">Qué hacemos</a>
           <a href="#beneficios" className="hover:text-[#1E3A8A]">Beneficios</a>
-          <a href="#paquetes" className="hover:text-[#1E3A8A]">Paquetes</a>
+          <a href="#paquetes" className="hover:text-[#1E3A8A]">Servicios</a>
           <a href="#contacto" className="hover:text-[#1E3A8A]">Contacto</a>
         </nav>
 
-        {/* CTA (si lo usas como ancla interna) */}
+        {/* CTA */}
         <a
           href="#contacto"
           className="hidden md:inline-block px-4 py-2 rounded-lg bg-[#294F8A] text-white"

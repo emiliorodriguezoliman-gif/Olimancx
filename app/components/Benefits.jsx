@@ -16,10 +16,10 @@ export default function Benefits() {
               Lo que duele hoy
             </h3>
             <ul className="mt-4 list-disc pl-5 space-y-2 text-red-700 marker:text-red-600">
-              <li>Cobros atrasados y flujo roto.</li>
-              <li>No-shows por citas olvidadas.</li>
-              <li>Respuestas lentas en WhatsApp → leads perdidos.</li>
-              <li>Demasiadas apps desconectadas y errores.</li>
+              <li>Operación desordenada y sin procesos claros.</li>
+              <li>Clientes que se pierden por falta de seguimiento.</li>
+              <li>Ventas estancadas o impredecibles.</li>
+              <li>Dudas constantes del equipo y errores repetidos.</li>
             </ul>
           </div>
 
@@ -29,10 +29,10 @@ export default function Benefits() {
               Cómo lo resolvemos
             </h3>
             <ul className="mt-4 list-disc pl-5 space-y-2 text-emerald-700 marker:text-emerald-600">
-              <li>Pagos automáticos con recordatorios.</li>
-              <li>Agenda inteligente con reprogramación.</li>
-              <li>Bot 24/7 que responde y captura datos.</li>
-              <li>Reportes claros y mini coaching mensual.</li>
+              <li>Diagnóstico claro para entender qué está frenando tu negocio.</li>
+              <li>Diseño de procesos simples para atención, ventas y operación.</li>
+              <li>Acompañamiento humano para mantener el orden y corregir desviaciones.</li>
+              <li>Herramientas prácticas y orientación continua según tus necesidades.</li>
             </ul>
           </div>
         </div>
