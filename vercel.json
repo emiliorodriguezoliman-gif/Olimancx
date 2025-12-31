@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "olimancx.vercel.app"
+        }
+      ],
+      "destination": "https://www.olimancx.com/$1",
+      "permanent": true
+    }
+  ]
+}
