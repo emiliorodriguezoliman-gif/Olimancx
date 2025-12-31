@@ -8,8 +8,8 @@ export const metadata = {
   title: "Oliman CX",
   description:
     "Consultoría y mejora de procesos con enfoque humano. Orden, claridad y eficiencia para que tu negocio crezca.",
-  metadataBase: new URL("https://olimancx.vercel.app"),
-  alternates: { canonical: "https://olimancx.vercel.app" },
+  metadataBase: new URL("https://www.olimancx.com"),
+  alternates: { canonical: "https://www.olimancx.com" },
   openGraph: {
     title: "Oliman CX",
     description:
